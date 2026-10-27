@@ -1,0 +1,73 @@
+{
+  "schema": 1,
+  "source_sha256": "faa1b961343b97b0b97cea857f760b3c36ecc2323f54f7328084ed7b98a9c5f2",
+  "checks": [
+    {
+      "name": "snapshot equal values",
+      "pass": true
+    },
+    {
+      "name": "snapshot has no start alias",
+      "pass": true
+    },
+    {
+      "name": "snapshot has no end alias",
+      "pass": true
+    },
+    {
+      "name": "snapshot has no target alias",
+      "pass": true
+    },
+    {
+      "name": "snapshot scalar independent",
+      "pass": true
+    },
+    {
+      "name": "no false changes",
+      "pass": true
+    },
+    {
+      "name": "correct geometry diff start",
+      "pass": true
+    },
+    {
+      "name": "correct geometry diff end",
+      "pass": true
+    },
+    {
+      "name": "correct geometry diff target",
+      "pass": true
+    },
+    {
+      "name": "only timing diff holdA",
+      "pass": true
+    },
+    {
+      "name": "only timing diff move",
+      "pass": true
+    },
+    {
+      "name": "only timing diff holdB",
+      "pass": true
+    },
+    {
+      "name": "zoom names explicit",
+      "pass": true
+    },
+    {
+      "name": "pace names explicit",
+      "pass": true
+    },
+    {
+      "name": "diff does not mutate inputs",
+      "pass": true
+    },
+    {
+      "name": "replay copy cannot overwrite reference or current",
+      "pass": true
+    }
+  ],
+  "passed": 16,
+  "failed": 0,
+  "scope": "Pure snapshot/diff implementation under Node. Does not prove Lens event wiring or UI usability."
+}

@@ -1,0 +1,121 @@
+{
+  "schema": 1,
+  "source_sha256": "badddb4e70429dd7240a863c91284ad18b376d5abfad71c5675c30adef72cf94",
+  "checks": [
+    {
+      "name": "ordinary spatial plan accepted",
+      "pass": true
+    },
+    {
+      "name": "zero camera path rejected",
+      "pass": true
+    },
+    {
+      "name": "target on camera path rejected",
+      "pass": true
+    },
+    {
+      "name": "nonfinite geometry NaN",
+      "pass": true
+    },
+    {
+      "name": "nonfinite timing NaN",
+      "pass": true
+    },
+    {
+      "name": "nonfinite projection NaN",
+      "pass": true
+    },
+    {
+      "name": "nonfinite geometry Infinity",
+      "pass": true
+    },
+    {
+      "name": "nonfinite timing Infinity",
+      "pass": true
+    },
+    {
+      "name": "nonfinite projection Infinity",
+      "pass": true
+    },
+    {
+      "name": "nonfinite geometry -Infinity",
+      "pass": true
+    },
+    {
+      "name": "nonfinite timing -Infinity",
+      "pass": true
+    },
+    {
+      "name": "nonfinite projection -Infinity",
+      "pass": true
+    },
+    {
+      "name": "invalid timing -1/5/1",
+      "pass": true
+    },
+    {
+      "name": "invalid timing 1/0/1",
+      "pass": true
+    },
+    {
+      "name": "invalid timing 1/-1/1",
+      "pass": true
+    },
+    {
+      "name": "invalid timing 1/61/1",
+      "pass": true
+    },
+    {
+      "name": "invalid timing 11/5/1",
+      "pass": true
+    },
+    {
+      "name": "invalid timing 1/5/11",
+      "pass": true
+    },
+    {
+      "name": "hold start",
+      "pass": true
+    },
+    {
+      "name": "move boundary",
+      "pass": true
+    },
+    {
+      "name": "end hold boundary",
+      "pass": true
+    },
+    {
+      "name": "done boundary",
+      "pass": true
+    },
+    {
+      "name": "invalid beat is not done",
+      "pass": true
+    },
+    {
+      "name": "zero zoom hidden",
+      "pass": true
+    },
+    {
+      "name": "behind camera hidden",
+      "pass": true
+    },
+    {
+      "name": "coincident target hidden",
+      "pass": true
+    },
+    {
+      "name": "zoom scales framing not depth ratio",
+      "pass": true
+    },
+    {
+      "name": "camera movement changes relative size",
+      "pass": true
+    }
+  ],
+  "passed": 28,
+  "failed": 0,
+  "scope": "Actual pure TypeScript module under Node type stripping; not Lens runtime or usability evidence"
+}

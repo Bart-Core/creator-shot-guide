@@ -1,0 +1,65 @@
+{
+  "source": "Lens Studio Asset Library; install under Snap terms",
+  "packages": [
+    {
+      "name": "AiPreviewAgentInspect.lspkg",
+      "sha256": "16cbd923e8ad91cf5ceb986e1234292708528b90946074f8d7bc7065b3fee269",
+      "bytes": 36622
+    },
+    {
+      "name": "AiPreviewAgentInspect.lspkg.meta",
+      "sha256": "87a9b665d282f7d28faa6b3958c585b08247a04ed2560acc60130117d7b09b5a",
+      "bytes": 444
+    },
+    {
+      "name": "AiPreviewAgentInteract.lspkg",
+      "sha256": "47146bae011bc0e083748e46a6aca3871ba9389e01a49d1abdbe17f3ca93fa91",
+      "bytes": 33297
+    },
+    {
+      "name": "AiPreviewAgentInteract.lspkg.meta",
+      "sha256": "f499174c954fd3d1ae657f753f4703ea3a246d6a26efe1402ede0f14e828d778",
+      "bytes": 444
+    },
+    {
+      "name": "Bitmoji 3D.lsc",
+      "sha256": "b2a0776bda72db8a8d342c85fffd31da2ce5ecd12450c225c02668d29b764178",
+      "bytes": 43797
+    },
+    {
+      "name": "Bitmoji 3D.lsc.meta",
+      "sha256": "2e5c57a7ab8b0006d30beab732d65b6da85c44bf2582dbadf901b606bd4d10e9",
+      "bytes": 444
+    },
+    {
+      "name": "Leaf.lspkg",
+      "sha256": "3fc7a2dfeaf244a084a1e80a7f478f82dacc454635e74725dbbbeef064456339",
+      "bytes": 269073
+    },
+    {
+      "name": "Leaf.lspkg.meta",
+      "sha256": "b24a2584f347f0629d43a92436c80969a0cf5783a3737a756cf887cd7e1ba44f",
+      "bytes": 444
+    },
+    {
+      "name": "SpectaclesInteractionKit.lspkg",
+      "sha256": "f6fdaac0bd829d0e994c4b8ee134be65b726c0881943aed34a044785cc329cd4",
+      "bytes": 1928581
+    },
+    {
+      "name": "SpectaclesInteractionKit.lspkg.meta",
+      "sha256": "e982ce76672f320b48a204d3c51d83252e86d5f53ba90b2f2ad048889388aa19",
+      "bytes": 444
+    },
+    {
+      "name": "SpectaclesUIKit.lspkg",
+      "sha256": "e0871ec39a4499626e4ce24289b186190676aad1529a9eee24d67b61dc61436d",
+      "bytes": 1248238
+    },
+    {
+      "name": "SpectaclesUIKit.lspkg.meta",
+      "sha256": "25be08a429038026bd19dec29b8007eddedf43cf7af3e71fbf6e8e9af50dc34f",
+      "bytes": 444
+    }
+  ]
+}

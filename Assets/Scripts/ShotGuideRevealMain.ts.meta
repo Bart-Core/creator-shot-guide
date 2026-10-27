@@ -1,0 +1,78 @@
+- !<AssetImportMetadata/a1d74ee8-19d9-48f9-85fd-0cdbac1cc7f5>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 7c474ed9-bfaf-4f69-8e7b-649e04a68ceb
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 7c474ed9-bfaf-4f69-8e7b-649e04a68ceb
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 7c8fde43-eab6-44b0-b527-43bd1bcd84bf
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/7c8fde43-eab6-44b0-b527-43bd1bcd84bf>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: ef95138e-8ebc-48cf-b127-5cebe099fc5c
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    closingHold: false
+    debugColliders: false
+    endHandle: false
+    endVisual: false
+    moveSeconds: false
+    openingHold: false
+    panel: false
+    smooth: false
+    startHandle: false
+    startVisual: false
+    targetHandle: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - panel: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      startHandle: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      endHandle: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      targetHandle: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      startVisual: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      endVisual: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      openingHold: !<float> 1.000000
+      closingHold: 1.500000
+      moveSeconds: !<float> 5.000000
+      smooth: true
+      debugColliders: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"BART-CORE / Reveal rehearsal"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input AssignableType_1 panel {"hint":"Passive UIKit view"}'
+    - '// @input SceneObject startHandle {"hint":"Camera A unit-scale handle"}'
+    - '// @input SceneObject endHandle {"hint":"Camera B unit-scale handle"}'
+    - '// @input SceneObject targetHandle {"hint":"Independent subject target"}'
+    - '// @input SceneObject startVisual {"hint":"Cyan visual template"}'
+    - '// @input SceneObject endVisual {"hint":"Gold visual template"}'
+    - '// @input float openingHold = 1 {"hint":"Start hold seconds", "widget":"slider", "min":0, "max":3, "step":0.5}'
+    - '// @input float closingHold = 1.5 {"hint":"End hold seconds", "widget":"slider", "min":0, "max":3, "step":0.5}'
+    - '// @input float moveSeconds = 5 {"hint":"Move seconds", "widget":"slider", "min":3, "max":8, "step":1}'
+    - '// @input bool smooth = true {"hint":"Ease movement rather than constant speed"}'
+    - '// @input bool debugColliders {"hint":"Draw collider outlines after restart"}'

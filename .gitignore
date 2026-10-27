@@ -1,0 +1,10 @@
+Cache/
+Support/
+Workspaces/
+PluginsUserPreferences/
+*.pem
+*.lock
+.codex/
+.mcp.json
+Packages/*.lspkg
+Packages/*.lsc

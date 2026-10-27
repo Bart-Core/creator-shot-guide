@@ -1,0 +1,75 @@
+- !<AssetImportMetadata/cf122258-4f3f-4aab-b9f8-bc640b291e6f>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 5a6d240d-d63d-4592-a93e-f35203ea045c
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 5a6d240d-d63d-4592-a93e-f35203ea045c
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 9e870cef-06f0-42a1-9334-17805f2e3ef5
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/9e870cef-06f0-42a1-9334-17805f2e3ef5>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 8386ab51-cf4f-4c6b-bdc6-570738ae1364
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    closingHold: false
+    debugColliders: false
+    endHandle: false
+    endVisual: false
+    minDistanceCm: false
+    moveSeconds: false
+    openingHold: false
+    panel: false
+    startHandle: false
+    startVisual: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - panel: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      startHandle: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      endHandle: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      startVisual: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      endVisual: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      openingHold: !<float> 1.000000
+      closingHold: 1.500000
+      moveSeconds: !<float> 5.000000
+      minDistanceCm: !<float> 10.000000
+      debugColliders: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"BART-CORE / story before motion"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input AssignableType_1 panel {"hint":"Passive UIKit panel"}'
+    - '// @input SceneObject startHandle {"hint":"Unit-scale detail placement handle"}'
+    - '// @input SceneObject endHandle {"hint":"Unit-scale reveal placement handle"}'
+    - '// @input SceneObject startVisual {"hint":"Existing cyan sphere visual, cloned for cue"}'
+    - '// @input SceneObject endVisual {"hint":"Existing gold sphere visual, cloned for trail"}'
+    - '// @input float openingHold = 1 {"hint":"Opening hold duration", "widget":"slider", "min":0.5, "max":3, "step":0.5}'
+    - '// @input float closingHold = 1.5 {"hint":"Closing hold duration", "widget":"slider", "min":0.5, "max":4, "step":0.5}'
+    - '// @input float moveSeconds = 5 {"hint":"Default move duration; UI offers 3, 5 and 8 seconds", "widget":"slider", "min":3, "max":8, "step":1}'
+    - '// @input float minDistanceCm = 10 {"hint":"Minimum separation, not a safety-distance assessment", "widget":"slider", "min":5, "max":30, "step":1}'
+    - '// @input bool debugColliders {"hint":"Draw collider outlines after preview restart"}'

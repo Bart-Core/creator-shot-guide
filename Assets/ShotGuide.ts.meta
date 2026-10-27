@@ -1,0 +1,58 @@
+- !<AssetImportMetadata/cce8a72f-9cef-4bec-b953-a19858513368>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 31c87a3f-ea6d-4609-a69b-673e8bb520fe
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 31c87a3f-ea6d-4609-a69b-673e8bb520fe
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 3ecd677f-067b-4566-b7c7-957535e934ae
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/3ecd677f-067b-4566-b7c7-957535e934ae>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 371e2284-b068-4b10-b7c3-72fe3e819cd3
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    buttonLabel: false
+    buttonObject: false
+    endMarker: false
+    instruction: false
+    startMarker: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - buttonObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      instruction: !<reference.Text3D> 00000000-0000-0000-0000-000000000000
+      buttonLabel: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      startMarker: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      endMarker: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input SceneObject buttonObject
+    - // @input Component.Text3D instruction
+    - // @input Component.Text buttonLabel
+    - // @input SceneObject startMarker
+    - // @input SceneObject endMarker

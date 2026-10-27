@@ -1,0 +1,79 @@
+{
+  "source_sha256": "faa1b961343b97b0b97cea857f760b3c36ecc2323f54f7328084ed7b98a9c5f2",
+  "checks": [
+    {
+      "name": "invalid side 0 start NaN",
+      "pass": true
+    },
+    {
+      "name": "invalid side 0 target NaN",
+      "pass": true
+    },
+    {
+      "name": "invalid side 0 move NaN",
+      "pass": true
+    },
+    {
+      "name": "invalid side 0 start Infinity",
+      "pass": true
+    },
+    {
+      "name": "invalid side 0 target Infinity",
+      "pass": true
+    },
+    {
+      "name": "invalid side 0 move Infinity",
+      "pass": true
+    },
+    {
+      "name": "invalid side 0 start -Infinity",
+      "pass": true
+    },
+    {
+      "name": "invalid side 0 target -Infinity",
+      "pass": true
+    },
+    {
+      "name": "invalid side 0 move -Infinity",
+      "pass": true
+    },
+    {
+      "name": "invalid side 1 start NaN",
+      "pass": true
+    },
+    {
+      "name": "invalid side 1 target NaN",
+      "pass": true
+    },
+    {
+      "name": "invalid side 1 move NaN",
+      "pass": true
+    },
+    {
+      "name": "invalid side 1 start Infinity",
+      "pass": true
+    },
+    {
+      "name": "invalid side 1 target Infinity",
+      "pass": true
+    },
+    {
+      "name": "invalid side 1 move Infinity",
+      "pass": true
+    },
+    {
+      "name": "invalid side 1 start -Infinity",
+      "pass": true
+    },
+    {
+      "name": "invalid side 1 target -Infinity",
+      "pass": true
+    },
+    {
+      "name": "invalid side 1 move -Infinity",
+      "pass": true
+    }
+  ],
+  "passed": 18,
+  "failed": 0
+}
