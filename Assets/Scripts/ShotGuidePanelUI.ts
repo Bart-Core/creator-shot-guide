@@ -1,4 +1,5 @@
 import Event from "SpectaclesInteractionKit.lspkg/Utils/Event";
+import {Frame} from "SpectaclesUIKit.lspkg/Scripts/Components/Frame/Frame";
 import {BackPlate} from "SpectaclesUIKit.lspkg/Scripts/BackPlate";
 import {Button} from "SpectaclesUIKit.lspkg/Scripts/Components/Button/Button";
 import {FlexLayout} from "SpectaclesUIKit.lspkg/Scripts/Components/Layout2D/Flex/FlexLayout";
@@ -44,12 +45,21 @@ export class ShotGuidePanelUI extends BaseScriptComponent {
   onAwake(){this.createEvent("OnStartEvent").bind(()=>this.build());}
   private build(){
     this.sceneObject.createComponent("Component.Canvas");
-    const plate=this.sceneObject.createComponent(BackPlate.getTypeName()) as BackPlate;
-    plate.style="simple";
-    const content=this.obj(this.sceneObject,"Content",new vec3(0,0,.6));
+    // A real UIKit Frame lets the wearer move controls away from busy scenery.
+    // Additive AR cannot promise an opaque panel over the physical world.
+    const window=this.sceneObject.createComponent(Frame.getTypeName()) as Frame;
+    window.autoShowHide=false;window.autoScaleContent=false;window.allowScaling=false;
+    window.onInitialized.add(()=>{
+      window.innerSize=new vec2(this.widthCm,36);window.padding=new vec2(1,1);
+      window.showCloseButton=false;window.showFollowButton=false;
+      this.buildContent(window);
+    });
+  }
+  private buildContent(window:Frame){
+    const content=this.obj(window.contentTransform.getSceneObject(),"Content",new vec3(0,0,.6));
     const col=this.flex(content,FlexDirection.Column,this.widthCm,36,.5,1.5);
     const f=col.getComponent(FlexLayout.getTypeName()) as FlexLayout;
-    f.onLayoutComplete.add(r=>plate.size=new vec2(r.containerWidth,r.containerHeight));
+    f.onLayoutComplete.add(r=>window.innerSize=new vec2(r.containerWidth,r.containerHeight));
     this.rowText(col,this.title,"Title2",this.widthCm-3,3);
     this.statusText=this.rowText(col,"SET YOUR STORY","Headline2",this.widthCm-3,2);
     this.bodyText=this.rowText(col,this.message.body,"Body",this.widthCm-3,2);
@@ -104,18 +114,18 @@ export class ShotGuidePanelUI extends BaseScriptComponent {
     this.viewText=this.button(this.framePage,"GuideView","COMPARE FRAME A / B",this.widthCm-3,3,()=>this.onView.invoke());
     });
     this.actionText=this.button(col,"GuideAction","REHEARSE",this.widthCm-3,4,()=>this.onAction.invoke());
-    this.rowText(col,"BART-CORE / stationary rehearsal only","Caption",this.widthCm-3,1.5);
+    this.rowText(col,"Drag the frame to a clear background / stay still","Caption",this.widthCm-3,1.5);
     this.render();
     const register=this.createEvent("DelayedCallbackEvent");
     register.bind(()=>{
       this.pendingItems.forEach(p=>p.layout.addItems([p.item]));
       // Decorative plates are not controls: their broad near-field colliders
       // must not compete with the actual UIKit buttons inside the panel.
-      [plate,this.simulationFrame.getComponent(BackPlate.getTypeName()) as BackPlate,...this.projected.map(p=>p.plate)].forEach(p=>{p.interactable.enabled=false;p.interactionPlane.enabled=false;});
+      [this.simulationFrame.getComponent(BackPlate.getTypeName()) as BackPlate,...this.projected.map(p=>p.plate)].forEach(p=>{p.interactable.enabled=false;p.interactionPlane.enabled=false;});
       this.projected.forEach((o,i)=>{const rr=o.object.getComponent(RoundedRectangle.getTypeName()) as RoundedRectangle;if(rr){rr.gradient=false;rr.backgroundColor=i?this.detailColor:this.revealColor;}});
       const frame=this.simulationFrame.getComponent(RoundedRectangle.getTypeName()) as RoundedRectangle;
       if(frame){frame.gradient=false;frame.backgroundColor=new vec4(.06,.08,.11,1);frame.borderColor=new vec4(.65,.75,.8,1);}
-      const backing=this.sceneObject.getComponent(RoundedRectangle.getTypeName()) as RoundedRectangle;
+      const backing=window.roundedRectangle;
       if(backing){backing.gradient=false;backing.opacity=1;backing.blendMode=RoundedRectBlendMode.Normal;backing.backgroundColor=new vec4(.22,.48,.68,1);backing.borderColor=new vec4(.35,.95,1,1);}
       this.page(0);this.render();
       console.info("[ShotGuideUI] built "+this.pendingItems.length+" layout items");
@@ -151,7 +161,7 @@ export class ShotGuidePanelUI extends BaseScriptComponent {
       this.referenceButton.text=this.message.locked?"REPLAY LOCKED":this.compareState.saved?"PLAY REFERENCE":"SAVE FIRST";
       if(this.message.action==="REHEARSE")this.actionText.text="PLAY CURRENT PLAN";
     }
-    this.durationLabels.forEach((t,i)=>{t.text=[3,5,8][i]+"s"+(this.message.locked?" LOCKED":" MOVE");t.textFill.color=([3,5,8][i]===this.message.seconds?this.detailColor:new vec4(1,1,1,this.message.locked?.25:.55));});
+    this.durationLabels.forEach((t,i)=>{t.text=[3,5,8][i]+"s"+(this.message.locked?" LOCKED":" MOVE");t.textFill.color=([3,5,8][i]===this.message.seconds?this.detailColor:new vec4(1,1,1,this.message.locked?.45:1));});
     if(this.holdAText){const suffix=this.message.locked?" LOCK":"";this.holdAText.text="HOLD A "+this.options.a+"s"+suffix;this.holdBText.text="HOLD B "+this.options.b+"s"+suffix;this.zoomText.text="ZOOM "+this.options.zoom;this.easeText.text=this.options.smooth?"EASE":"LINEAR";this.viewText.text=this.message.locked?"PARAMETERS LOCKED":"PREVIEW "+(this.options.end?"B":"A")+" / SWITCH";}
   }
   private obj(parent:SceneObject,name:string,position?:vec3){

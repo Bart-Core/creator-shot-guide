@@ -2,7 +2,9 @@
 
 Plan a reveal before filming it. Place camera endpoints and an independent look-at target, rehearse timing, keep an immutable reference and compare a changed plan.
 
-**[Watch the actual 94-second Preview demo](https://youtu.be/cvHd_nS7T4o).**
+**[Watch the 77-second edited Preview demo](https://youtu.be/z827C2Xr5SM).**
+
+The new movable-frame update is described in [UI update](devpost/ui-update-20261030.md). This video predates that UI update; a fresh recording is pending.
 
 ## Who and why
 For creators planning a detail-to-subject reveal. Bartzilla's miniature-to-monument footage inspired a spatial decision loop: move, look, time, compare. Camera targeting and previsualisation are established techniques; we do not claim to have invented them.
